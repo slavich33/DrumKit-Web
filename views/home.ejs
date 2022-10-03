@@ -1,0 +1,16 @@
+<%-include("partials/header") -%>
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+<% newPosts.forEach(function(post){ %>
+  <!-- <div class="item"> -->
+    <!-- <input type="checkbox" > -->
+  <%  post.posts.forEach(function(pos) { %>
+      <h1><%= pos.title %></h1>
+        <p> <%= pos.bodyText.substring(0, 100) + " ..." %> <a href="/posts/<%= pos.title %>" >Read more</a></p>
+  <%  }); %>
+
+  <!-- </div> -->
+    <% }); %>
+
+<%-include("partials/footer") -%>
